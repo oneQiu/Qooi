@@ -1,7 +1,7 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  title: 'Qoo',
+  title: 'Qooi',
   favicon: 'https://code-1257508274.cos.ap-guangzhou.myqcloud.com/logo.svg',
   logo: 'https://code-1257508274.cos.ap-guangzhou.myqcloud.com/logo.svg',
   outputPath: 'docs-dist',
@@ -25,7 +25,7 @@ export default defineConfig({
     null,
     {
       title: 'GitHub',
-      path: 'https://github.com/umijs/dumi-template',
+      path: 'https://github.com/oneQiu/Qoo',
     },
   ],
   // more config: https://d.umijs.org/config

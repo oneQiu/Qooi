@@ -1,6 +1,5 @@
 {
-  "private": true,
-  "name": "Qiu",
+  "name": "qooi",
   "version": "1.0.0",
   "scripts": {
     "start": "dumi dev",
@@ -26,7 +25,9 @@
       "prettier --parser=typescript --write"
     ]
   },
-  "dependencies": {
+  "peerDependencies": {
+    "@tinymce/tinymce-react": "^4.0.0",
+    "antd": "^4.20.2",
     "react": "^16.12.0 || ^17.0.0"
   },
   "devDependencies": {
@@ -41,5 +42,10 @@
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
     "yorkie": "^2.0.0"
+  },
+  "dependencies": {
+    "@tinymce/tinymce-react": "^4.0.0",
+    "antd": "^4.20.2",
+    "eslint": "^8.14.0"
   }
 }
