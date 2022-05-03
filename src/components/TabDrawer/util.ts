@@ -1,3 +1,5 @@
+type AnyObj<T = any> = { [key: string]: T };
+
 export const getUrlParams = (names?: string[]): { [key: string]: string } => {
   const uri = new URL(location.href);
   const res: AnyObj = {};

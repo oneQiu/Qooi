@@ -4,8 +4,9 @@ import Sidebar from './widget/Sidebar';
 import { LoadingOutlined } from '@ant-design/icons';
 // 引入tinymce
 import { Editor, IAllProps } from '@tinymce/tinymce-react';
-import './index.less';
 import React from 'react';
+import { Field, UploadHandler, Mode } from './interface';
+import './index.less';
 
 const baseUrl: string = 'https://static-1257508274.file.myqcloud.com/tinymce/js/tinymce';
 
@@ -15,16 +16,16 @@ export interface EditorRef extends Editor {
 
 export interface RichEditorProps extends Omit<IAllProps, 'onChange' | 'onLoadContent'> {
   /** 普通 ｜ 发拍 | 只读 */
-  mode: RichEditor.Mode;
+  mode: Mode;
   value?: string;
   /** 回调函数 */
   onChange?: (value: string) => void;
   /** 初始化事件 */
   onLoad?: () => void;
   /** 图片上传 */
-  onImageUpload?: RichEditor.UploadHandler;
+  onImageUpload?: UploadHandler;
   /** 字段列表 */
-  fileList?: RichEditor.Field[];
+  fileList?: Field[];
 }
 export default forwardRef<Partial<EditorRef>, RichEditorProps>(
   (
@@ -53,7 +54,7 @@ export default forwardRef<Partial<EditorRef>, RichEditorProps>(
       return isSuccess ?? false;
     };
 
-    const onFieldClick = (field: RichEditor.Field) => {
+    const onFieldClick = (field: Field) => {
       const html = `<input value=$\{${field.name}} data-key=${
         field.key
       } style="border: none;background: none" size=${field.name.length * 2 + 2} disabled />`;
@@ -69,7 +70,7 @@ export default forwardRef<Partial<EditorRef>, RichEditorProps>(
       onLoad?.();
     };
 
-    const imageUploadHandler: RichEditor.UploadHandler = async (
+    const imageUploadHandler: UploadHandler = async (
       blobInfo,
       success,
       fail,

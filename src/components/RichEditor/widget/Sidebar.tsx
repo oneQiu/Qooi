@@ -1,13 +1,14 @@
 import { Collapse } from 'antd';
 import { CaretRightOutlined, PlusOutlined } from '@ant-design/icons';
 import React from 'react';
+import { Field } from '../interface';
 
 const { Panel } = Collapse;
 
 interface IProps {
-  onFieldClick: (i: RichEditor.Field) => void;
-  fieldList?: RichEditor.Field[];
-  templateList?: RichEditor.Field[];
+  onFieldClick: (i: Field) => void;
+  fieldList?: Field[];
+  templateList?: Field[];
 }
 export default ({ onFieldClick, fieldList = [], templateList = [] }: IProps) => {
   return (

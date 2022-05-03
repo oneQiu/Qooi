@@ -1,6 +1,7 @@
 /**
  * 组件懒加载
  */
+import React from 'react';
 import { ReactNode, useEffect, useState } from 'react';
 
 interface IProps {
