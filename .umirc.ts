@@ -21,6 +21,7 @@ export default defineConfig({
       skipPropsWithoutDoc: false,
     },
   },
+  publicPath: process.env.NODE_ENV === 'production' ? '/qooi/' : '/',
   navs: [
     null,
     {
