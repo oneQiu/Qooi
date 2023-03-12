@@ -4,7 +4,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  parser: 'babel-eslint', // 解析器
+  parser: '@babel/eslint-parser', // 解析器
   extends: [], // 扩展
   plugins: [], // 插件
   globals: {
